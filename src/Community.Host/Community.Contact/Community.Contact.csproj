@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA44D1E0-B6B1-4903-81E8-4282116EA656}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Community.Contact</RootNamespace>
+    <AssemblyName>Community.Contact</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Community.Contact.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Community.Contact.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Swashbuckle.Core.5.5.3\lib\net40\Swashbuckle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDto.cs" />
+    <Compile Include="Category\CreateCategory.cs" />
+    <Compile Include="Category\GetTargetAllCategory.cs" />
+    <Compile Include="Category\UpdateCategoryDisplayIndex.cs" />
+    <Compile Include="Category\UpdateCategoryHotStatus.cs" />
+    <Compile Include="Category\UpdateCategoryOffLineStatus.cs" />
+    <Compile Include="Category\UpdateObjectCategory.cs" />
+    <Compile Include="Comment\DeleteCommentRequestDto.cs" />
+    <Compile Include="Comment\Enum\AuditStatusEnum.cs" />
+    <Compile Include="Comment\Enum\TargetTypeEnum.cs" />
+    <Compile Include="Comment\GetCommentRequestDto.cs" />
+    <Compile Include="Comment\GetReportListRequestDto.cs" />
+    <Compile Include="Comment\ReportAuditRequestDto.cs" />
+    <Compile Include="Group\CreateGroup.cs" />
+    <Compile Include="Group\CreateClassify.cs" />
+    <Compile Include="Group\DeletePost.cs" />
+    <Compile Include="Group\GetClassifyList.cs" />
+    <Compile Include="Group\GetGroupList.cs" />
+    <Compile Include="Group\GetGroupPostList.cs" />
+    <Compile Include="Group\GetPostDetail.cs" />
+    <Compile Include="Group\GetPostListByQuery.cs" />
+    <Compile Include="Group\RemoveClassify.cs" />
+    <Compile Include="Group\RemoveGroup.cs" />
+    <Compile Include="Group\UpdateClassify.cs" />
+    <Compile Include="Group\UpdateClassifyOrder.cs" />
+    <Compile Include="Group\UpdateGroup.cs" />
+    <Compile Include="Image\AddProject.cs" />
+    <Compile Include="Common\Component\Resource.cs" />
+    <Compile Include="Common\GetCity.cs" />
+    <Compile Include="Common\GetDistrict.cs" />
+    <Compile Include="Image\GetImageProjectName.cs" />
+    <Compile Include="Common\GetProvince.cs" />
+    <Compile Include="Common\GetResourceTypeList.cs" />
+    <Compile Include="Image\GetSystemImage.cs" />
+    <Compile Include="Common\GetUploadTokenToQiniu.cs" />
+    <Compile Include="Enum\CategoryTypeEnum.cs" />
+    <Compile Include="Enum\HotEnum.cs" />
+    <Compile Include="Enum\OffLineEnum.cs" />
+    <Compile Include="Enum\UpdateCategoryTypeEnum.cs" />
+    <Compile Include="News\Component\NewsIntro.cs" />
+    <Compile Include="News\Component\UpdateNewsHotStatus.cs" />
+    <Compile Include="News\Component\UpdateNewsOffLineStatus.cs" />
+    <Compile Include="News\CreateNews.cs" />
+    <Compile Include="News\GetNewsList.cs" />
+    <Compile Include="News\UpdateNews.cs" />
+    <Compile Include="News\UpdateNewsHotStatus.cs" />
+    <Compile Include="News\UpdateNewsOffLineStatus.cs" />
+    <Compile Include="Product\GetProductDetailById.cs" />
+    <Compile Include="Product\GetProductList.cs" />
+    <Compile Include="Product\UpdateProductHotStatus.cs" />
+    <Compile Include="Product\UpdateProductOffLineStatus.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Image\AddSystemImage.cs" />
+    <Compile Include="Works\Component\ItemInfo.cs" />
+    <Compile Include="Works\GetWorksDetail.cs" />
+    <Compile Include="Works\GetWorksList.cs" />
+    <Compile Include="Works\UpdateWorksHotStatus.cs" />
+    <Compile Include="Works\UpdateWorksOffLineStatus.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="User\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

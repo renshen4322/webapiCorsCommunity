@@ -1,0 +1,16 @@
+﻿using Community.Core.Data;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Communiry.Entity
+{
+   public class ProvinceEntity:BaseEntity
+    {
+       public int Id { get; set; }
+       public string Name { get; set; }
+       public int OrderId { get; set; }
+    }
+}
